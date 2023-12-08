@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="BTS SIO" description="Presentation du BTS">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="BTS SIO"
+				tagline="Presentation du BTS."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/bts.png"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">BTS SIO</h2>
+				<div class="content">
+					<p>
+						Le BTS Services Informatiques aux Organisations (SIO) est une formation de deux ans qui vise à former des professionnels 
+						capables de répondre aux besoins informatiques des organisations. Ce diplôme est structuré autour de deux options : 
+						Solutions d'Infrastructure, Systèmes et Réseaux (SISR) et Solutions Logicielles et Applications Métiers (SLAM)
+
+						- Option SLAM (Solutions Logicielles et Applications Métiers) :
+						Cette option se concentre sur le développement logiciel et la création d'applications métiers. 
+						Les étudiants apprennent à concevoir des solutions informatiques répondant aux besoins spécifiques d'une organisation. 
+						Cela inclut le développement d'applications, la programmation, la gestion de bases de données, et l'intégration de solutions logicielles. 
+						Les compétences acquises permettent aux étudiants de participer à toutes les phases du cycle de vie d'une application.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">SISR</h2>
+				<div class="content">
+					<p>- (Solutions d'Infrastructure, Systèmes et Réseaux) :
+						Cette option met l'accent sur la conception, la mise en place, et la maintenance des infrastructures informatiques. 
+						Les étudiants apprennent à administrer des serveurs, configurer des réseaux, assurer la sécurité des systèmes, 
+						et mettre en place des solutions de virtualisation. Ils acquièrent également des compétences dans la gestion des services 
+						réseau et des systèmes d'exploitation.</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">SLAM</h2>
+				<div class="content">
+					<p>- (Solutions Logicielles et Applications Métiers) :
+						Cette option se concentre sur le développement logiciel et la création d'applications métiers. 
+						Les étudiants apprennent à concevoir des solutions informatiques répondant aux besoins spécifiques d'une organisation. 
+						Cela inclut le développement d'applications, la programmation, la gestion de bases de données, et l'intégration de solutions logicielles. 
+						Les compétences acquises permettent aux étudiants de participer à toutes les phases du cycle de vie d'une application.</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

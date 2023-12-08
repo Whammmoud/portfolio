@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="Mon Alternance" description="...">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Mon Alternance"
+				tagline=""
+			>
+			<section>
+				<h2 class="section-title">Data Center Thales</h2>
+				<div class="content">
+					<p>
+						Thales est un leader mondial dans le domaine des technologies de pointe, 
+						se spécialisant dans les secteurs de l'aérospatiale, de la défense, 
+						de la sécurité et des transports. L'entreprise est reconnue pour ses 
+						innovations de pointe qui contribuent à façonner les industries critiques 
+						à l'échelle mondiale. Forte d'une expertise diversifiée, Thales joue un 
+						rôle essentiel en fournissant des solutions technologiques avancées 
+						et sécurisées pour répondre aux défis complexes de notre monde moderne.
+						
+						
+						
+						
+						
+						
+						
+						Évoluer au cœur de ce datacenter m'a permis de plonger au cœur des 
+						technologies de l'information, au sein d'un environnement dynamique
+						et exigeant. J'ai eu l'opportunité de collaborer avec des experts 
+						chevronnés et passionnés, contribuant ainsi à des projets novateurs 
+						qui repoussent les limites de l'innovation technologique.
+
+						Mon apprentissage au sein du datacenter de Thales a été une aventure 
+						exceptionnelle, marquée par des défis stimulants et des enseignements 
+						précieux. J'ai acquis une compréhension approfondie des infrastructures 
+						critiques qui soutiennent les opérations de l'entreprise 
+						et j'ai pu appliquer mes connaissances théoriques dans un environnement 
+						professionnel concret.
+						
+					</p>
+				</div>
+			</section>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/cv photo.png"
+					alt="Entreprise"
+				/>
+			</Hero>
+
+			
+			
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

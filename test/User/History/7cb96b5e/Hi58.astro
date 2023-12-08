@@ -1,0 +1,111 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="BTS SIO" description="Veille Technologique">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="Veille"
+				tagline="Technologique"
+			>
+				<img
+					width= 30%
+					height= 30% 
+					src="/assets/bac1.jpg"
+					alt="Jeanine White at work with a colleague"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title"></h2>
+				<div class="content">
+					<p>
+						Cette veille technologique se concentre sur l'exploration 
+						des bacs à immersion en datacenter, une innovation 
+						révolutionnaire dans la gestion thermique des équipements 
+						informatiques. Ces bacs immergent les serveurs dans des 
+						fluides diélectriques spéciaux, promettant une dissipation
+						thermique plus efficace, une réduction de la consommation 
+						d'énergie, et des avantages environnementaux. La recherche 
+						abordera les technologies de fluides utilisées, les considérations 
+						de sécurité, et les expériences d'entreprises telles que Microsoft 
+						et Google qui ont déjà adopté cette technologie, tout en soulignant 
+						les défis potentiels liés à la maintenance et à la conformité réglementaire.					
+				</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title"></h2>
+				<div class="content">
+					<p>- Cette veille, régulièrement mise à jour, représente une contribution significative à mon portfolio BTS SIO, 
+						mettant en avant ma capacité à comprendre et à communiquer des sujets technologiques avancés, ainsi que ma volonté 
+						de rester informé des dernières tendances dans le domaine des datacenters.</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>

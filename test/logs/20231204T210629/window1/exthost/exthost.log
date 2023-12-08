@@ -1,0 +1,17 @@
+2023-12-04 21:06:31.982 [info] Extension host with pid 2671 started
+2023-12-04 21:06:31.982 [info] Skipping acquiring lock for /opposite-osiris/test/User/workspaceStorage/073d789181e2f5bc1e54ca89c1627549.
+2023-12-04 21:06:32.050 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2023-12-04 21:06:32.073 [info] ExtensionService#_doActivateExtension astro-build.astro-vscode, startup: false, activationEvent: 'onLanguage:astro'
+2023-12-04 21:06:33.032 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2023-12-04 21:06:33.063 [info] ExtensionService#_doActivateExtension vscode.npm, startup: true, activationEvent: 'workspaceContains:package.json'
+2023-12-04 21:06:33.181 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2023-12-04 21:06:33.257 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2023-12-04 21:06:33.887 [info] Eager extensions activated
+2023-12-04 21:06:33.907 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2023-12-04 21:06:33.921 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2023-12-04 21:37:40.142 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:typescript'
+2023-12-04 23:57:02.146 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:markdown'
+2023-12-04 23:57:02.326 [info] ExtensionService#_doActivateExtension vscode.markdown-language-features, startup: false, activationEvent: 'onLanguage:markdown'
+2023-12-04 23:57:03.816 [info] ExtensionService#_doActivateExtension vscode.markdown-math, startup: false, activationEvent: 'api', root cause: vscode.markdown-language-features
+2023-12-05 00:12:51.925 [info] Extension host terminating: renderer closed the MessagePort
+2023-12-05 00:12:52.286 [info] Extension host with pid 2671 exiting with code 0
